@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', light 300;
+}
+
+header {
+    display:flex;
+    /* background: khaki; */
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+
+.logo-container,.nav-links,.cart {
+    display: flex;
+}
+
+.logo-container{
+    /* background: lightblue; */
+    flex: 1;
+}
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+nav{
+    /* background: lightgreen; */
+    flex: 2;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(92, 23, 14);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cart {
+    /* background: lightpink; */
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+
+}
+
+.introduction {
+    /* background: lightpink; */
+    flex: 1;
+} 
+
+.intro-text h1 {
+    font-size: 50px;
+    font-weight: 500;
+    background: linear-gradient(to right, #206f8f, #68a8bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+}
+
+.cta {
+    padding: 50px 0px 0px 0px;
+}
+
+.cta-select {
+    border: 2px solid #206f8f;
+    background: transparent;
+    color: #68a8bb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'montserrat', light 300;
+    font-size: 16px;
+
+}
+
+.cta-add {
+    border: 2px solid #206f8f;
+    background: #68a8bb;
+    color: #ffffff; 
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'montserrat', light 300;
+    font-size: 16px;
+    margin: 0px 0px 0px 30px;
+}
+.cover {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    
+}
+
+.cover img {
+    height: 100%;
+    filter: drop-shadow(0px 8px 8px black);
+    animation: drop 1.5s ease;
+}
+
+.big-circle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    height: 80%;
+    margin-left: 0px;
+}
+
+.big-circle2 {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.2;
+    height: 80%;
+    
+}
+
+.medium-circle {
+    position: absolute;
+    top: 30%;
+    right: 31.5%;
+    z-index:-1;
+    height: 70%;
+}
+
+.small-circle {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index:-1;
+}
+
+.small-circle2 {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index:-1;
+    opacity: 0.8;
+}
+
+.laptop-select {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right:20%;
+}
+
+@keyframes drop{
+    0% {
+        opacity:0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+/*to make site responsive*/
+@media screen and (max-width:1024px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    .cover img{
+        height:20%;
+    }
+
+    .small-circle,
+    .medium-circle,
+    .big-circle{
+        opacity: 0.3;
+    }
+}
